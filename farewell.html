@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f4eee5">
+<title>Arun — The End of an Era</title>
+<meta name="description" content="A farewell tribute to the people, the madness, the maps, and everything in between.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Arun — The End of an Era">
+<meta property="og:description" content="A farewell tribute to the people, the madness, the maps, and everything in between. Come say goodbye ♥">
+<meta property="og:image" content="og-preview.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="628">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+:root{
+ --bg:#f4eee5;--paper:#fffaf3;--ink:#282522;--muted:#746b62;
+ --orange:#c96d43;--orange2:#e5a17a;--purple:#766b91;--line:#e6d9ca;
+ --green:#75866c;--shadow:0 18px 50px rgba(67,48,34,.09);--radius:24px
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+button{cursor:pointer}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(244,238,229,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(120,95,75,.12)}
+.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-weight:850;letter-spacing:.04em}.brand span{color:var(--orange)}
+.navlinks{display:flex;gap:20px;align-items:center;font-size:.88rem;color:var(--muted)}
+.navlinks a:hover{color:var(--orange)}
+.menu{display:none;border:1px solid var(--line);background:var(--paper);border-radius:12px;padding:8px 12px}
+.hero{padding:76px 0 58px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid #e5cbb8;background:#fff5eb;color:#9c5737;border-radius:999px;padding:7px 13px;font-size:.75rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase}
+.hero-grid{display:grid;grid-template-columns:1.12fr .88fr;gap:46px;align-items:center}
+h1{font-size:clamp(2.5rem,4.5vw,4.2rem);line-height:1.06;letter-spacing:-.035em;margin:22px 0}
+h1 em{font-style:normal;color:var(--orange)}
+.lead{font-size:1.13rem;color:var(--muted);max-width:620px}
+.hero-note{font-family:Georgia,serif;font-size:1.15rem;font-style:italic;color:#755a49;margin-top:24px}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.btn{border:0;border-radius:999px;padding:13px 19px;font-weight:750;background:var(--ink);color:white;transition:.2s;display:inline-flex;justify-content:center;align-items:center;gap:8px}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.btn.secondary{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.hero-art{min-height:420px;border-radius:34px;background:linear-gradient(145deg,#e8c8ad,#d9c9d9 58%,#e8d8bd);padding:22px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+.hero-art:before,.hero-art:after{content:"";position:absolute;border-radius:50%;background:rgba(255,255,255,.24)}
+.hero-art:before{width:290px;height:290px;right:-70px;top:-80px}
+.hero-art:after{width:210px;height:210px;left:-70px;bottom:-70px}
+.art-card{position:absolute;inset:48px 35px;background:rgba(255,250,243,.86);border:1px solid rgba(255,255,255,.65);border-radius:26px;padding:28px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(2deg);box-shadow:0 22px 55px rgba(65,45,35,.13);z-index:1}
+.art-stamp{font-size:.75rem;letter-spacing:.16em;font-weight:900;color:var(--orange)}
+.art-big{font-family:Georgia,serif;font-size:clamp(2rem,3.6vw,3.4rem);line-height:1.05;letter-spacing:-.04em}
+.art-big span{color:var(--orange)}
+.art-foot{display:flex;justify-content:space-between;color:var(--muted);font-size:.8rem}
+section{padding:66px 0}
+.section-head{display:flex;justify-content:space-between;gap:24px;align-items:end;margin-bottom:28px}
+.kicker{color:var(--orange);font-weight:850;text-transform:uppercase;letter-spacing:.12em;font-size:.73rem}
+h2{font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.055em;line-height:1.05;margin:8px 0 0}
+.sub{color:var(--muted);max-width:570px;margin:0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:23px;box-shadow:0 7px 25px rgba(67,48,34,.035)}
+.stat strong{display:block;font-size:2.35rem;letter-spacing:-.06em;color:var(--orange)}
+.stat span{font-size:.9rem;color:var(--muted)}
+.letter{background:#fff9f0;border:1px solid #e8d8c7;border-radius:30px;padding:clamp(25px,5vw,58px);box-shadow:var(--shadow);position:relative}
+.letter:before{content:"“";font-family:Georgia,serif;font-size:8rem;line-height:.5;color:#e7c6ae;position:absolute;top:45px;right:42px}
+.letter p{max-width:800px;color:#62574e;font-size:1.04rem}
+.signature{font-family:Georgia,serif;font-size:2.1rem;font-style:italic;color:var(--orange);margin-top:25px}
+.people-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+.squad{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:start}
+.squad.four{grid-template-columns:repeat(4,1fr)}
+.card.member{padding:0;background:none;border:0;box-shadow:none;cursor:pointer;text-align:center;transition:transform .22s;perspective:1200px}
+.member:hover{transform:translateY(-4px)}
+.flip-inner{position:relative;transition:transform .6s;transform-style:preserve-3d}
+.face{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:23px;-webkit-backface-visibility:hidden;backface-visibility:hidden;box-shadow:0 7px 25px rgba(67,48,34,.035)}
+.member:hover .face{box-shadow:var(--shadow)}
+.back{position:absolute;inset:0;transform:rotateY(180deg);display:none;flex-direction:column;justify-content:center;align-items:flex-start;gap:6px;text-align:left;overflow:auto}
+.back > *:not(.back-photo){position:relative;z-index:1}
+.back-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%;opacity:0.22;z-index:0;pointer-events:none;mix-blend-mode:multiply;border-radius:inherit}
+.member.open .back{display:flex}
+.member.flipped .flip-inner{transform:rotateY(180deg)}
+.back h4{margin:0;font-family:Georgia,serif;font-size:1.3rem;padding-right:80px}
+.back p{font-family:"Noteworthy","Bradley Hand","Segoe Print",cursive;font-size:.95rem;line-height:24px;color:#4f4038;margin:0}
+.back .from{font-family:Georgia,serif;font-style:italic;color:var(--orange)}
+.member.open .face.back{background:repeating-linear-gradient(#fffaf2 0 27px,#efe2d3 27px 28px);border-color:#e5cbb8;padding:26px 24px 20px 42px}
+.back:before{content:"";position:absolute;left:28px;top:0;bottom:0;width:1px;background:#ecb9a0}
+.stamp{position:absolute;top:16px;right:16px;width:52px;height:60px;background:var(--orange);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:1.3rem;line-height:1.1;border:3px dotted #fffaf2;outline:1px solid var(--orange);transform:rotate(4deg)}
+.stamp small{font-size:.55rem;font-weight:800;letter-spacing:.1em}
+.postmark{position:absolute;top:24px;right:56px;width:72px;height:72px;border:2px solid rgba(118,107,145,.45);border-radius:50%;color:rgba(118,107,145,.65);font-size:.55rem;font-weight:900;letter-spacing:.12em;line-height:1.4;display:grid;place-items:center;text-align:center;transform:rotate(-14deg);pointer-events:none}
+.sign{display:flex;align-items:center;gap:8px;margin-top:2px}
+.seal{width:30px;height:30px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#e08a62,#a84f2b);color:#fff3e8;display:grid;place-items:center;font-family:Georgia,serif;font-weight:700;box-shadow:0 2px 6px rgba(120,50,20,.35)}
+.flip-btn{margin-top:8px;border:1px solid #e5cbb8;background:var(--paper);color:var(--orange);border-radius:50%;width:38px;height:38px;padding:0;display:inline-grid;place-items:center;font-size:1.2rem;font-weight:800}
+.flip-btn:hover{background:var(--orange);color:#fff}
+.avatar{width:96px;height:96px;margin:0 auto 12px;border-radius:50%;background:linear-gradient(145deg,#f1d3bd,#ddd0e4);display:grid;place-items:center;font-size:2rem;font-weight:850;color:#9c5737;overflow:hidden;box-shadow:0 0 0 5px #fff,0 0 0 6px var(--line)}
+.avatar img{width:100%;height:100%;object-fit:cover;object-position:center 15%}
+.member h3{margin:0;font-size:1.05rem}
+.member .open-hint{display:block;font-size:.72rem;color:var(--orange);font-weight:800;margin-top:6px}
+.member .details{display:none;text-align:left;margin-top:14px;border-top:1px dashed var(--line);padding-top:14px}
+.member.open{grid-column:span 2}
+.member.open .face{background:#fff5eb;border-color:#e5cbb8}
+.member.open .details{display:block}
+.member .tagline{font-family:Georgia,serif;font-style:italic;color:#755a49;font-size:.95rem;margin:10px 0}
+.member .details p{font-size:.88rem;color:var(--muted);margin:0}
+.person-card{display:flex;flex-direction:column;gap:13px;transition:.22s;cursor:pointer}
+.person-card p{display:none}
+.person-card.open{background:#fff5eb;border-color:#e5cbb8}
+.person-card.open p{display:block}
+.person-card .open-hint{font-size:.72rem;color:var(--orange);font-weight:800}
+.person-card:hover,.award:hover,.dict:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.person-icon{width:52px;height:52px;border-radius:17px;background:#f5e5d8;display:grid;place-items:center;font-size:1.55rem}
+.person-card h3{margin:0;font-size:1.2rem;line-height:1.35;min-height:2.7em;display:flex;align-items:center}
+.person-card p{margin:0;color:var(--muted);font-size:.92rem}
+.tag{font-size:.75rem;color:#9c5737;background:#fff0e5;padding:6px 10px;border-radius:999px;align-self:flex-start;margin-top:auto}
+.route-map{position:relative;height:380px;border-radius:28px;border:1px solid #ddd5c8;box-shadow:var(--shadow);background:#f3f0e8;margin-bottom:18px}
+.route-map svg{position:absolute;inset:0;width:100%;height:100%;clip-path:inset(0 round 28px)}
+.route-card{position:absolute;bottom:16px;right:16px;z-index:3;background:rgba(255,255,255,.88);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:18px;padding:14px 16px;box-shadow:0 8px 24px rgba(0,0,0,.12);min-width:230px}
+.route-card .rc-title{font-weight:800;font-size:.95rem}
+.route-card .rc-row{display:flex;align-items:center;gap:8px;font-size:.82rem;color:#555;margin-top:6px}
+.route-card .dot{width:10px;height:10px;border-radius:50%;flex:none}
+.route-card .chips{display:flex;gap:6px;margin-top:10px}
+.route-card .chip{background:#1f7aec;color:#fff;font-size:.72rem;font-weight:800;border-radius:999px;padding:4px 10px}
+.route-card .chip.alt{background:#e9eef6;color:#1f5fbf}
+.wp{position:absolute;z-index:2;transform:translate(-50%,-50%);display:flex;flex-direction:column;align-items:center;cursor:pointer;outline:none}
+.wp:hover,.wp:focus{z-index:5}
+.wp .pin{transition:transform .2s}
+.wp:hover .pin,.wp:focus .pin{transform:scale(1.18)}
+.wp.end:hover .pin,.wp.end:focus .pin{transform:rotate(-45deg) scale(1.18)}
+.tip{position:absolute;top:calc(100% + 10px);left:50%;transform:translate(-50%,6px);width:240px;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:16px;padding:14px 16px;box-shadow:0 12px 30px rgba(0,0,0,.18);text-align:left;opacity:0;visibility:hidden;transition:.2s;pointer-events:none}
+.tip.up{top:auto;bottom:calc(100% + 10px)}
+.tip.left{left:0;transform:translate(-14px,6px)}
+.tip.right{left:auto;right:0;transform:translate(14px,6px)}
+.wp:hover .tip,.wp:focus .tip{opacity:1;visibility:visible;transform:translate(-50%,0)}
+.wp:hover .tip.left,.wp:focus .tip.left{transform:translate(-14px,0)}
+.wp:hover .tip.right,.wp:focus .tip.right{transform:translate(14px,0)}
+.tip.side-left{top:50%;bottom:auto;left:auto;right:calc(100% + 14px);transform:translate(6px,-50%)}
+.wp:hover .tip.side-left,.wp:focus .tip.side-left{transform:translate(0,-50%)}
+.tip h3{font-size:.98rem;margin:3px 0 5px}
+.tip p{font-size:.84rem;color:var(--muted);margin:0;line-height:1.45}
+.tip .phase{font-size:.68rem;text-transform:uppercase;letter-spacing:.1em;color:#1f6fd1;font-weight:850}
+.map-hint{text-align:center;font-size:.8rem;color:var(--muted);margin:0}
+.wp .pin{width:28px;height:28px;border-radius:50%;background:#fff;color:#1f6fd1;border:3px solid #1f6fd1;display:grid;place-items:center;font-size:.75rem;font-weight:900;box-shadow:0 3px 8px rgba(0,0,0,.25)}
+.wp.start .pin{background:#34c759;border-color:#fff;color:#fff;width:24px;height:24px}
+.wp.end{transform:translate(-50%,-100%)}
+.wp.end .pin{width:36px;height:36px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#ff3b30;border:3px solid #fff}
+.wp.end .pin span{transform:rotate(45deg);color:#fff;font-size:.9rem}
+.wp .lbl{margin-top:6px;background:#fff;border-radius:999px;padding:3px 10px;font-size:.72rem;font-weight:800;white-space:nowrap;box-shadow:0 2px 6px rgba(0,0,0,.15)}
+.wp.end .lbl{margin-top:4px}
+.wp.start:after{content:"";position:absolute;top:50%;left:50%;width:24px;height:24px;margin:-12px 0 0 -12px;border-radius:50%;background:rgba(52,199,89,.35);animation:pulse 2s infinite;z-index:-1}
+@keyframes pulse{to{transform:scale(2.6);opacity:0}}
+.compass{position:absolute;right:16px;top:16px;z-index:3;width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.9);display:grid;place-items:center;font-size:.75rem;font-weight:900;color:#ff3b30;box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;counter-reset:stop}
+.step{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px 16px 16px 54px;counter-increment:stop}
+.step:before{content:counter(stop);position:absolute;left:14px;top:16px;width:28px;height:28px;border-radius:50%;background:#fff;border:3px solid #1f6fd1;color:#1f6fd1;display:grid;place-items:center;font-size:.75rem;font-weight:900;box-sizing:border-box}
+.step:first-child:before{content:"";background:#34c759;border-color:#fff;box-shadow:0 0 0 2px #34c759}
+.step:last-child:before{content:"★";background:#ff3b30;border-color:#fff;color:#fff;box-shadow:0 0 0 2px #ff3b30}
+.step:not(:last-child):after{content:"";position:absolute;left:27px;top:50px;bottom:14px;border-left:3px dotted #9cbbe8}
+.step h3{font-size:1rem;margin:4px 0 6px}
+.step p{font-size:.86rem;color:var(--muted);margin:0}
+.step .phase{font-size:.7rem;text-transform:uppercase;letter-spacing:.1em;color:#1f6fd1;font-weight:850}
+.awards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:start}
+.award{cursor:pointer;text-align:left;transition:.2s;min-height:190px}
+.award .emoji{font-size:2rem}
+.award h3{font-size:1rem;margin:10px 0 5px}
+.award p{color:var(--muted);font-size:.88rem;margin:0}
+.award .hint{display:block;color:var(--orange);font-size:.72rem;font-weight:800;margin-top:14px}
+.dictionary{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-items:start}
+.dict{cursor:pointer;text-align:left;transition:.2s}
+.dict strong{display:block}
+.dict p{display:none;color:var(--muted);margin:8px 0 0;font-size:.9rem}
+.dict.open p{display:block}
+.dict .plus{float:right;color:var(--orange);font-weight:900}
+.reels{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.reel{background:var(--paper);border:1px solid var(--line);border-radius:26px;overflow:hidden;box-shadow:0 7px 25px rgba(67,48,34,.035);transition:.22s}
+.reel:hover{transform:translateY(-4px);box-shadow:var(--shadow)}
+.reel-media{position:relative;aspect-ratio:16/10;background:linear-gradient(145deg,#2f2a27,#4a3c35);display:grid;place-items:center;overflow:hidden}
+.reel-media video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#1f1b19}
+.reel-empty{color:#e9d8ca;text-align:center;font-size:.85rem;padding:20px}
+.reel-empty .big{display:block;font-size:2.4rem;margin-bottom:6px}
+.reel-media.ready .reel-empty{display:none}
+.reel-badge{position:absolute;top:14px;left:14px;z-index:2;background:rgba(255,255,255,.88);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:var(--ink);font-size:.7rem;font-weight:850;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:5px 11px;pointer-events:none}
+.reel-body{padding:18px 22px 22px}
+.reel-body h3{margin:0 0 6px;font-size:1.25rem;letter-spacing:-.02em}
+.reel-body p{margin:0;color:var(--muted);font-size:.92rem}
+.candid-wall{position:absolute;inset:0;background:#4a3324}
+.candid-wall img{width:100%;height:100%;object-fit:cover;object-position:center 12%;cursor:zoom-in;transition:transform .6s ease}
+.reel:hover .candid-wall img{transform:scale(1.05)}
+.candid-open{position:absolute;left:50%;bottom:14px;transform:translateX(-50%);z-index:3;background:rgba(255,255,255,.92);color:var(--ink);font-size:.75rem;font-weight:800;border-radius:999px;padding:6px 14px;box-shadow:0 6px 18px rgba(0,0,0,.3);pointer-events:none;white-space:nowrap}
+#candidMedia:not(.ready) .candid-open{display:none}
+.lightbox{overflow:auto}
+.lightbox{position:fixed;inset:0;z-index:60;background:rgba(20,16,14,.9);display:none;place-items:center;padding:30px;cursor:zoom-out}
+.lightbox.show{display:grid}
+.lightbox img{max-width:100%;max-height:90vh;border-radius:14px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
+.reel{position:relative;will-change:transform}
+.reel-media video{transition:transform .6s ease}
+.reel.previewing .reel-media video{transform:scale(1.05)}
+.reel-media[role=button]{cursor:pointer}
+.play-btn{position:relative;z-index:3;width:68px;height:68px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:transform .25s,opacity .25s;pointer-events:none}
+.play-btn:before{content:"";margin-left:6px;border-left:20px solid var(--orange);border-top:13px solid transparent;border-bottom:13px solid transparent}
+.play-btn:after{content:"";position:absolute;inset:-8px;border-radius:50%;border:2px solid rgba(255,255,255,.7);animation:ring 2s infinite}
+@keyframes ring{from{transform:scale(.9);opacity:1}to{transform:scale(1.4);opacity:0}}
+.reel:hover .play-btn{transform:scale(1.12)}
+.reel.previewing .play-btn{opacity:.75}
+.reel-dur{position:absolute;right:14px;bottom:14px;z-index:3;background:rgba(0,0,0,.6);color:#fff;font-size:.72rem;font-weight:800;border-radius:8px;padding:3px 8px;pointer-events:none}
+.reel-hint{position:absolute;left:14px;bottom:14px;z-index:3;color:#fff;font-size:.72rem;font-weight:800;opacity:0;transform:translateY(6px);transition:.25s;pointer-events:none;text-shadow:0 1px 4px rgba(0,0,0,.7)}
+.reel.previewing .reel-hint{opacity:1;transform:none}
+.reel-glare{position:absolute;inset:0;z-index:5;pointer-events:none;background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.22),transparent 55%);opacity:0;transition:opacity .3s}
+.reel:hover .reel-glare{opacity:1}
+.cinema{position:fixed;inset:0;z-index:70;background:rgba(15,12,10,.94);display:none;place-items:center;padding:5vw}
+.cinema.show{display:grid;animation:fadeIn .25s}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+.cinema-inner{position:relative;width:min(1000px,100%);animation:popIn .3s ease}
+@keyframes popIn{from{transform:scale(.94)}to{transform:none}}
+.cinema video{width:100%;max-height:78vh;border-radius:16px;background:#000;box-shadow:0 30px 80px rgba(0,0,0,.6)}
+.cinema-title{color:#fff;font-weight:800;margin-top:14px;font-size:1.15rem}
+.cinema-close{position:absolute;top:-46px;right:0;width:38px;height:38px;border-radius:50%;border:0;background:rgba(255,255,255,.15);color:#fff;font-size:1.4rem;line-height:1}
+.cinema-close:hover{background:var(--orange)}
+.guest{display:grid;grid-template-columns:.8fr 1.2fr;gap:25px}
+.guest-panel{background:#eee4ed;border-radius:26px;padding:28px}
+.form{display:grid;gap:12px}
+label{font-size:.83rem;font-weight:800}
+input,textarea{width:100%;border:1px solid var(--line);background:#fffdf9;border-radius:13px;padding:12px 14px;outline:none}
+input:focus,textarea:focus{border-color:var(--orange);box-shadow:0 0 0 3px #c96d4320}
+textarea{min-height:105px;resize:vertical}
+.note{font-size:.78rem;color:var(--muted)}
+.messages{display:grid;gap:10px;margin-top:16px}
+.message{background:var(--paper);border:1px solid var(--line);border-radius:15px;padding:13px}
+.message strong{font-size:.9rem}.message p{margin:5px 0 0;color:var(--muted);font-size:.88rem}
+.final{background:#302b29;color:#fff8ef;border-radius:32px;padding:clamp(35px,7vw,75px);text-align:center;overflow:hidden;position:relative}
+.final h2{font-family:Georgia,serif;font-size:clamp(2.7rem,6vw,5.3rem);max-width:800px;margin:15px auto}
+.final p{color:#d9c9bd;max-width:650px;margin:14px auto}
+.final .signature{color:#e5a17a}
+footer{padding:25px 0 40px;text-align:center;color:var(--muted);font-size:.8rem}
+.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#282522;color:white;padding:12px 18px;border-radius:999px;opacity:0;pointer-events:none;transition:.25s;z-index:50}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.hero-grid,.guest{grid-template-columns:1fr}.hero-art{min-height:360px}.stats{grid-template-columns:repeat(2,1fr)}.people-grid{grid-template-columns:repeat(2,1fr)}.squad,.squad.four{grid-template-columns:repeat(3,1fr)}.timeline{grid-template-columns:repeat(2,1fr);gap:25px}.awards{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}.menu{display:block}}
+@media(max-width:560px){.wrap{width:min(100% - 28px,1120px)}.hero{padding:48px 0 30px}.hero-art{min-height:330px}.art-card{inset:35px 20px;padding:22px}.section-head{display:block}.section-head .sub{margin-top:12px}.people-grid,.gallery,.dictionary,.reels{grid-template-columns:1fr}.squad,.squad.four{grid-template-columns:1fr 1fr}.avatar{width:76px;height:76px}.stats{gap:9px}.card{padding:18px}.route-map{height:300px}.route-card{min-width:0;padding:10px 12px}.route-card .chips{display:none}.wp .lbl{display:none}.compass{display:none}.tip{width:200px}.awards{grid-template-columns:1fr 1fr}.award{padding:17px;min-height:175px}section{padding:48px 0}}
+</style>
+</head>
+<body>
+<nav>
+ <div class="wrap nav-inner">
+  <a class="brand" href="#top">ARUN<span>.</span> / THE FAREWELL EDITION</a>
+  <div class="navlinks">
+   <a href="#letter">A note</a><a href="#people">The people</a><a href="#journey">My journey</a><a href="#hall">Hall of fame</a><a href="#memories">Memories</a><a href="#guestbook">Guestbook</a>
+  </div>
+  <button class="menu" onclick="document.querySelector('#people').scrollIntoView({behavior:'smooth'})">Explore ↓</button>
+ </div>
+</nav>
+<main id="top">
+<header class="hero wrap">
+ <div class="hero-grid">
+  <div>
+   <span class="eyebrow">✦ THE FINAL RELEASE · 2026</span>
+   <h1>The end of an era.<br><em>The beginning of</em><br>a thousand<br>memories.</h1>
+   <p class="lead">A tribute to the people, the madness, the maps, and everything in between. One team, countless challenges, and memories that deserve more than a farewell email.</p>
+   <div class="actions"><a class="btn" href="#people">Let's revisit the chaos ↗</a><a class="btn secondary" href="#letter">Read my final note</a></div>
+   <p class="hero-note">“I came here to build a career. I'm leaving with a whole lot of stories.”</p>
+  </div>
+  <div class="hero-art" aria-label="Farewell title artwork">
+   <div class="art-card">
+    <div class="art-stamp">A LITTLE THANK-YOU NOTE · TCS</div>
+    <div class="art-big">Maps change.<br><span>People matter.</span><br>Memories stay.</div>
+    <div class="art-foot"><span>With gratitude,</span><strong>— Arun ♥</strong></div>
+   </div>
+  </div>
+ </div>
+</header>
+
+<section class="wrap" id="dashboard">
+ <div class="section-head"><div><div class="kicker">The unofficial dashboard</div><h2>Our journey in numbers.</h2></div><p class="sub">Not audited. Not client-approved. Emotionally accurate.</p></div>
+ <div class="stats">
+  <div class="card stat"><strong>∞</strong><span>Clarifications raised</span></div>
+  <div class="card stat"><strong>∞</strong><span>“Please check once” messages</span></div>
+  <div class="card stat"><strong>100%</strong><span>Team commitment</span></div>
+  <div class="card stat"><strong>∞</strong><span>Friendships beyond work</span></div>
+ </div>
+</section>
+
+<section class="wrap" id="letter">
+ <div class="section-head"><div><div class="kicker">From the heart</div><h2>A note from Arun.</h2></div></div>
+ <article class="letter">
+  <p>When I look back at my time at TCS, I don't think first about the queries resolved, trackers updated, specifications documented, or RCAs completed. I think about the people.</p>
+  <p>This journey took me from learning the process and understanding Apple Maps workflows to taking on responsibilities as an SME, Spec &amp; RCA analyst and Spec Team POC. Every step pushed me to learn, take ownership, and grow beyond my comfort zone.</p>
+  <p>There were days when a simple query became a full investigation, a spectrum issue became an RCA, and a “quick meeting” somehow consumed half the day. There were challenging deadlines, corrections, debates, and moments when we wondered whether a specification was written for humans or for people with extraordinary patience.</p>
+  <p>But through all of it, there were people who made things easier. People who shared knowledge, challenged ideas, supported decisions, stepped up when needed, and made sure nobody had to figure everything out alone.</p>
+  <p>To my managers, thank you for the trust and opportunities. To my fellow POCs, thank you for the debates, clarifications and shared problem-solving. To my team, thank you for making leadership a learning experience. And to my close friends, thank you for making work feel like a place where I belonged.</p>
+  <p>I may forget a few ticket IDs, specification clauses, and definitely some tracker entries. But I won't forget the people behind them.</p>
+  <p><strong>Thank you for being part of my story.</strong></p>
+  <div class="signature">Arun (Alu)</div>
+  <span class="note">Formerly available for urgent clarifications. Now available for chai and catch-ups.</span>
+ </article>
+</section>
+
+<section class="wrap" id="people">
+ <div class="section-head"><div><div class="kicker">The real MVPs</div><h2>People behind the journey.</h2></div><p class="sub">The people who turned a job into a journey.</p></div>
+ <div class="people-grid">
+  <article class="card person-card"><div class="person-icon">🧭</div><h3>The Boss Level</h3><span class="tag">Manager</span><p>Thank you for trusting me with responsibility, encouraging me to grow, and reminding me that leadership is about people—not just numbers. Also, thanks for the occasional reminder that the deadline is, in fact, today.</p></article>
+  <article class="card person-card"><div class="person-icon">🦸</div><h3>The Spec Avengers</h3><span class="tag">Fellow POCs, SMEs &amp; my team</span><p>United by specifications, occasionally separated by interpretations. From complex scenarios and client clarifications to everyday questions and fresh ideas, you made every spec a team effort. I hope I helped you grow; I know you helped me grow too. Consider this my final official apology for asking, “Any updates on this?”</p></article>
+  <article class="card person-card"><div class="person-icon">💛</div><h3>The Inner Circle</h3><span class="tag">Close friends</span><p>For the random conversations, silly jokes, personal talks and tea breaks that somehow became half an hour. Work gave me colleagues; somewhere along the way, it gave me friends.</p></article>
+  <article class="card person-card"><div class="person-icon">☕</div><h3>The Unofficial Department</h3><span class="tag">Chai, lunch &amp; fun</span><p>Zero official deliverables. Maximum team bonding. The only department where nobody asked for an RCA and everyone was happy to attend.</p></article>
+ </div>
+</section>
+
+<section class="wrap" id="journey">
+ <div class="section-head"><div><div class="kicker">Arun.exe — version history</div><h2>From editor to Spec Team POC.</h2></div><p class="sub">A career progression with several plot twists and a suspicious number of trackers.</p></div>
+ <div class="route-map" aria-label="Career route map from Editor to Spec Team POC">
+  <svg viewBox="0 0 1000 380" preserveAspectRatio="none" aria-hidden="true">
+   <path d="M0 330 C180 300 260 360 420 340 S700 300 1000 345 L1000 380 L0 380Z" fill="#a8d4f5"/>
+   <path d="M600 0 L760 0 L720 70 L610 60Z" fill="#c8e6b4"/>
+   <ellipse cx="150" cy="120" rx="95" ry="55" fill="#c8e6b4"/>
+   <ellipse cx="860" cy="290" rx="80" ry="40" fill="#c8e6b4"/>
+   <rect x="380" y="40" width="120" height="70" rx="10" fill="#ebe5d8"/>
+   <rect x="820" y="40" width="110" height="80" rx="10" fill="#ebe5d8"/>
+   <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round">
+    <path d="M0 200 L1000 160"/><path d="M330 0 L380 380"/><path d="M640 0 L600 380"/><path d="M0 60 C300 80 700 20 1000 70"/>
+   </g>
+   <g stroke="#f7d774" stroke-width="10" fill="none" stroke-linecap="round"><path d="M0 200 L1000 160"/></g>
+   <g stroke="#fff" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M120 0 L170 380"/><path d="M500 0 L470 380"/><path d="M800 0 L860 380"/><path d="M0 280 L1000 250"/>
+   </g>
+   <path d="M60 280 C150 280 180 110 270 110 S420 240 500 240 S650 90 730 90 S880 200 940 200" stroke="#1557b0" stroke-width="16" fill="none" stroke-linecap="round"/>
+   <path d="M60 280 C150 280 180 110 270 110 S420 240 500 240 S650 90 730 90 S880 200 940 200" stroke="#2f86f6" stroke-width="10" fill="none" stroke-linecap="round"/>
+  </svg>
+  <div class="route-card">
+   <div class="rc-title">Arun's Career Route</div>
+   <div class="rc-row"><span class="dot" style="background:#34c759"></span>From: Editor</div>
+   <div class="rc-row"><span class="dot" style="background:#ff3b30"></span>To: Spec Team POC</div>
+   <div class="chips"><span class="chip">Arrived ✓</span><span class="chip alt">5 stops · ∞ memories</span></div>
+  </div>
+  <div class="compass">N</div>
+  <div class="wp start" style="left:6%;top:73.7%" tabindex="0"><span class="pin"></span><span class="lbl">The Newbie</span><div class="tip left up"><span class="phase">Phase 01</span><h3>The Newbie</h3><p>Learning Apple Maps, workflows, specifications and why every tiny detail matters.</p></div></div>
+  <div class="wp" style="left:27%;top:28.9%" tabindex="0"><span class="pin">2</span><span class="lbl">The Go-To Person</span><div class="tip"><span class="phase">Phase 02</span><h3>The Go-To Person</h3><p>Sharing knowledge, helping colleagues, mentoring and becoming a familiar name for tricky queries.</p></div></div>
+  <div class="wp" style="left:50%;top:63.2%" tabindex="0"><span class="pin">3</span><span class="lbl">Spec &amp; RCA Mode</span><div class="tip up"><span class="phase">Phase 03</span><h3>Spec &amp; RCA Mode</h3><p>Complex scenarios, escalations, client clarifications, documentation and root-cause investigations.</p></div></div>
+  <div class="wp" style="left:73%;top:23.7%" tabindex="0"><span class="pin">4</span><span class="lbl">Spec Team POC Unlocked</span><div class="tip"><span class="phase">Phase 04</span><h3>Spec Team POC Unlocked</h3><p>Supporting people, managing priorities, monitoring quality and learning that every person is different.</p></div></div>
+  <div class="wp end" style="left:94%;top:52.6%" tabindex="0"><span class="pin"><span>★</span></span><span class="lbl">Next Chapter</span><div class="tip side-left"><span class="phase">Phase 05</span><h3>Next Chapter</h3><p>New adventures ahead. Old connections retained. Office trackers permanently uninstalled.</p></div></div>
+ </div>
+ <p class="map-hint">Hover over a stop to see each phase of the journey.</p>
+</section>
+
+<section class="wrap" id="hall">
+ <div class="section-head"><div><div class="kicker">Awards nobody asked for</div><h2>The Maintenance Hall of Fame.</h2></div><p class="sub">Tap an award to reveal its official citation. No nominations, no calibration, no appeals.</p></div>
+ <div class="awards" id="awards"></div>
+</section>
+
+<section class="wrap" id="dictionary">
+ <div class="section-head"><div><div class="kicker">Lost in translation</div><h2>The unofficial team dictionary.</h2></div><p class="sub">Click a phrase. You already know what it means.</p></div>
+ <div class="dictionary" id="dictionaryList"></div>
+</section>
+
+<section class="wrap" id="squad">
+ <div class="section-head"><div><div class="kicker">Meet the squad</div><h2>One team. Ten legends.</h2></div><p class="sub">Tap a photo to reveal each person's official (and totally unofficial) title.</p></div>
+ <div class="squad" id="squadList"></div>
+</section>
+
+<section class="wrap" id="special">
+ <div class="section-head"><div><div class="kicker">Guest stars</div><h2>Special Appearance.</h2></div><p class="sub">Not in every episode, but impossible to forget. Tap a photo to reveal.</p></div>
+ <div class="squad four" id="specialList"></div>
+</section>
+
+<section class="wrap" id="prominent">
+ <div class="section-head"><div><div class="kicker">Supporting cast</div><h2>Prominent Roles.</h2></div><p class="sub">The characters who made every scene louder, funnier and more memorable.</p></div>
+ <div class="squad four" id="prominentList"></div>
+</section>
+
+<section class="wrap" id="memories">
+ <div class="section-head"><div><div class="kicker">Proof we had fun</div><h2>The camera roll deserves a promotion.</h2></div><p class="sub">Four reels of evidence that we did more than update trackers. Press play.</p></div>
+ <div class="reels">
+  <article class="reel"><div class="reel-media"><span class="reel-badge">😄 Happy Faces</span><video src="videos/happy-faces.mp4#t=0.5" muted loop playsinline preload="metadata" onloadedmetadata="this.parentElement.classList.add('ready')" onerror="this.remove()"></video><div class="reel-empty"><span class="big">😄</span>Video coming soon</div></div><div class="reel-body"><h3>Smiles Per Hour: Off the Charts</h3><p>No KPI ever measured this, but we exceeded the target every single quarter.</p></div></article>
+  <article class="reel"><div class="reel-media"><span class="reel-badge">🍽️ Dinner &amp; Outings</span><video src="videos/dinner-outing.mp4#t=0.5" muted loop playsinline preload="metadata" onloadedmetadata="this.parentElement.classList.add('ready')" onerror="this.remove()"></video><div class="reel-empty"><span class="big">🍽️</span>Video coming soon</div></div><div class="reel-body"><h3>Meetings That Should Have Been Dinners</h3><p>The only agenda: food, laughter, and splitting the bill without an RCA.</p></div></article>
+  <article class="reel"><div class="reel-media"><span class="reel-badge">🎂 Birthdays</span><video src="videos/birthdays.mp4#t=0.5" muted loop playsinline preload="metadata" onloadedmetadata="this.parentElement.classList.add('ready')" onerror="this.remove()"></video><div class="reel-empty"><span class="big">🎂</span>Video coming soon</div></div><div class="reel-body"><h3>Edit. Validate. Celebrate. Repeat!</h3><p>The only workflow where every step ends in cake.</p></div></article>
+  <article class="reel"><div class="reel-media" id="candidMedia"><span class="reel-badge">📸 Candids</span><div class="candid-wall" id="candidWall"></div><span class="candid-open">🔍 Tap to open the evidence board</span><div class="reel-empty"><span class="big">📸</span>Candids coming soon</div></div><div class="reel-body"><h3>Caught in 4K, Unfiltered</h3><p>No poses, no retakes, no approvals. Tap the board to inspect every piece of evidence.</p></div></article>
+ </div>
+</section>
+<div class="lightbox" id="lightbox" role="dialog" aria-label="Photo preview"><img alt=""></div>
+<div class="cinema" id="cinema" role="dialog" aria-label="Video player"><div class="cinema-inner"><button class="cinema-close" type="button" aria-label="Close video">×</button><video controls playsinline></video><div class="cinema-title"></div></div></div>
+
+<section class="wrap" id="guestbook">
+ <div class="section-head"><div><div class="kicker">One last thing</div><h2>Leave a little memory.</h2></div><p class="sub">A memory, an inside joke, a piece of advice—or a message for the next chapter.</p></div>
+ <div class="guest">
+  <div class="guest-panel"><div class="kicker">The only form without a tracker</div><h3 style="font-size:2rem;line-height:1.1;margin:12px 0">Before you close this chapter, leave me a note. ❤️</h3><p style="color:var(--muted)">I promise this is the only form where I won't ask you for an update by EOD.</p><p class="note">This will open your default email app to send your memory directly to my personal inbox.</p></div>
+  <div class="card">
+   <form class="form" id="guestForm">
+    <div><label for="guestName">Your name</label><input id="guestName" required placeholder="Who is this legend?"></div>
+    <div><label for="guestMemory">Your favourite memory with Arun</label><textarea id="guestMemory" placeholder="That one incident we'll never forget..."></textarea></div>
+    <div><label for="guestMessage">Your final message</label><textarea id="guestMessage" placeholder="A few words for the next chapter..."></textarea></div>
+    <button class="btn" type="submit">Leave a memory ♥</button>
+   </form>
+  </div>
+ </div>
+</section>
+
+<section class="wrap">
+ <div class="final">
+  <div class="kicker" style="color:#e5a17a">And that's a wrap, team</div>
+  <h2>No more daily trackers. No more pending queries. No more “Can you join the bridge?”</h2>
+  <p>Well... at least not from my official TCS account.</p>
+  <p>Thank you for every lesson, every laugh, every challenge we solved together, and every memory that made this journey special. The workplace may change. The connections don't have to.</p>
+  <div class="signature">Until our paths cross again — Arun ♥</div>
+  <p style="font-size:.82rem">P.S. If you ever need an RCA, please first check whether I'm having chai. Priorities, people. Priorities.</p>
+ </div>
+</section>
+</main>
+<footer><div class="wrap">Made with gratitude, a little nostalgia, and absolutely no pending RCA. · <span id="year"></span></div></footer>
+<div class="toast" id="toast" role="status"></div>
+<script>
+const awards=[
+ ["🔎","The “Please Check Once” Award","For turning a tiny request into a full investigation."],
+ ["📑","The RCA Never Ends Award","Root cause identified. Discussion initiated. Follow-up scheduled. RCA reopened."],
+ ["🗺️","The Spectrum Survivor Award","For surviving the days when every source tells a different story."],
+ ["📊","The Tracker Champion Award","For updating trackers, trackers about trackers, and reminders to update trackers."],
+ ["📞","The Client Clarification Award","For turning “Can you clarify this?” into a three-meeting discussion."],
+ ["🚨","The Spec Page Explorer Award","For venturing into the unknown when the specification needs another look."],
+ ["📧","The Meeting That Could Have Been an Email Award","No further explanation required. Everyone knows one."],
+ ["☕","The Chai Break Specialist Award","Outstanding performance in unofficial discussions and cafeteria attendance."]
+];
+document.getElementById('awards').innerHTML=awards.map(a=>`<button class="card award" type="button"><span class="emoji">${a[0]}</span><h3>${a[1]}</h3><p class="citation" hidden>${a[2]}</p><span class="hint">Reveal citation ↗</span></button>`).join('');
+document.querySelectorAll('.award').forEach(b=>b.addEventListener('click',()=>{const show=b.querySelector('.citation').hidden;document.querySelectorAll('.award').forEach(x=>{x.querySelector('.citation').hidden=true;x.querySelector('.hint').textContent='Reveal citation ↗'});if(show){b.querySelector('.citation').hidden=false;b.querySelector('.hint').textContent='Award citation revealed ✓'}}));
+const terms=[
+ ["“Please check once”","Please investigate this from the beginning, verify every source, read the specification and report back."],
+ ["“Quick clarification”","Please block the next 30–45 minutes. The word “quick” is purely decorative."],
+ ["“Need RCA”","The fun has officially ended. Please bring evidence, context and possibly snacks."],
+ ["“Client is following up”","Whatever you were doing, stop. This has entered a new level of urgency."],
+ ["“Please refer to Confluence”","The answer exists. Finding it is now your side quest."],
+ ["“Spectrum check required”","Welcome to another episode of Detective Arun."],
+ ["“Let's take it offline”","This discussion is nowhere near finished."],
+ ["“Tracker updated?”","I know what you did not update today."]
+];
+document.getElementById('dictionaryList').innerHTML=terms.map(t=>`<button class="card dict" type="button"><strong>${t[0]} <span class="plus">＋</span></strong><p>${t[1]}</p></button>`).join('');
+document.querySelectorAll('.dict').forEach(b=>b.addEventListener('click',()=>{const show=!b.classList.contains('open');document.querySelectorAll('.dict').forEach(x=>{x.classList.remove('open');x.querySelector('.plus').textContent='＋'});if(show){b.classList.add('open');b.querySelector('.plus').textContent='−'}}));
+const squad=[
+ ["Anusha","Partner in rod dinchipinchukovadam","Every never-ending call, every long explanation, every “one more point” — we sat through them side by side. Surviving the rod together is a bond no appraisal can measure."],
+ ["Saranya","Partner in Crime & Sync star","Always on the same wavelength — sometimes before the sentence was even finished. Partner in crime by choice, perfectly in sync by default."],
+ ["Madhukar","Impact Player (whatever maybe the chaos in team)","Escalations, deadlines, last-minute changes — the chaos never mattered. When it counted, Madhukar showed up and made the difference by always being the one who is to be blamed."],
+ ["Himabindu","Solo Star (Naaku nenay potee, naaku nenay saati)","Her own competition, her own companion. Whatever maybe the chaos in the team, I don't care, I have my own chaos to deal with."],
+ ["Sangeetha","Emo em chepalo telidu (anyways have some peace in life and work.)","Some people can't be summed up in a tag line — so here's a wish instead: calm days, lighter queues, and plenty of peace in life and work."],
+ ["Divya","The border person (Border lo unna kani etu side em jaragali, ela jaragali ani decide chesedi nenu matram ea)","Officially standing on the border, unofficially the one quietly deciding how everything on both sides turns out. Neutral in title, decisive in practice."],
+ ["Narender","Cooker Whistle (Entha pressure iste naaku enti… nenu teesukonu)","Deadlines, escalations, follow-ups — the pressure builds, but Narender simply lets off a whistle and carries on. Pressure is offered; pressure is politely declined."],
+ ["Midhun","Killer Smile (meeru em matladina nenu navvuta)","Good news, bad news, RCA news — the response is always the same: a smile. Impossible to stay stressed around him."],
+ ["Farheen","Straight Forward (Mundu evaru unte naaku enti, nenu naa laa ne unta)","No filters, no sugar-coating, no changing for the audience. What you see is exactly what you get — and that's rare."],
+ ["Srikanth","Silent Fellow (Sorry bro, nee tho peddaga time spend cheyaledu, so ee sariki ee tag teesuko)","We didn't get as much time together as we should have, bro — so this tag is a placeholder. The full version is due over chai sometime soon."]
+];
+const special=[
+ ["Bhanu","One Man Army (Meeru ela anna saavandi, naaku naa pani chesi pettandi. Pani ayyaka appudu treat kuda ista)","Give him a mountain of work and he'll move it on his own — no drama, no excuses. Just get his part done, and the treat follows. Deal of the century."],
+ ["Rohit","The Official Mood Booster (Em pani chestaru le raa, let's chill)","When the queue was full and the deadline was near, Rohit had one solution: chill first, worry later. Somehow, the work still got done — and everyone smiled more."],
+ ["Shalini","The Gentle Soul (Meeru entha anna pressure pettandi abba, nenu matram mellaga ne unta)","Escalations, follow-ups, last-minute changes — none of it ever rushed her. Calm, kind and steady: proof that the gentlest pace can still go the distance."],
+ ["Pankhuri","The Human Dynamo (Always energetic, enthusiastic, full of questions, and eager to know more)","Endless energy, endless questions, endless enthusiasm. If curiosity were a KPI, Pankhuri would top every dashboard."]
+];
+const prominent=[
+ ["Lakshmi Teja","The Happiness Hurricane (A whirlwind of laughter, energy, and ever-changing moods [epudu ela untano naake telidu])","Laughter one minute, a brand-new mood the next — never a dull moment when she's around. Unpredictable, yes. Unforgettable, absolutely."],
+ ["Sampath","The Official Babai of the House (Meeru entha chaotic situation kosam cheppina, nenu navvutune punchlu vesta)","No matter how chaotic things got, Sampath had a smile and a punch line ready. Every house needs a Babai; ours had the best one."],
+ ["Srikanth","The Lawyer Uncle (Nenu ila ne unta, nenu naa laa ne unta… annitiki vetakaram chestu unta)","Every statement gets cross-examined, every situation gets a sarcastic verdict. Objection overruled — the Lawyer Uncle always has the last word.","srikanth-lawyer"],
+ ["Deepika","The One and Only Chaotic Person on Floor (Enduku vostano, enduku hadavidi chestano, enduku vellipotano naake telidu. Eppatiki non-sync lone unta)","Arrives like a storm, creates a happy commotion, disappears just as suddenly. Never in sync, always memorable — the floor was never quiet with her around."]
+];
+const notes={
+ "anusha":"Thank you for sitting through every rod with me and still showing up with a smile. Those endless calls were far more bearable with you beside me.",
+ "saranya":"From the first message to the last sync, you were always on my wavelength. Thank you for the laughs, the plotting and the perfect timing.",
+ "madhukar":"For taking the blame with style and never letting the chaos change you. Every team needs an impact player like you.",
+ "himabindu":"Keep handling your own chaos like the solo star you are. Your independence and quiet strength always amuse me.",
+ "sangeetha":"I still don't know what to tell you, so here's the simplest wish: peace, patience and lots of happy days ahead.",
+ "divya":"From the border, you steered more decisions than anyone realised. Thank you for the balance, and for quietly running the show.",
+ "narender":"No pressure ever got to you, and that calm rubbed off on all of us. Keep whistling through the chaos.",
+ "midhun":"Thank you for the smile that answered every question, serious or not. It made the hard days lighter.",
+ "farheen":"Never change. Your honesty was refreshing, and I always knew exactly where I stood with you.",
+ "srikanth":"We didn't get enough time together, bro, so this card is an IOU. Chai is on me, and the proper tag comes with it.",
+ "bhanu":"Thank you for carrying the load like an army of one. I'm still waiting for that treat, by the way.",
+ "rohit":"Thank you for reminding everyone to breathe. The floor was always a little lighter when you were around.",
+ "shalini":"Your calm under pressure was a lesson in itself. Stay gentle, stay steady, and never let anyone rush you.",
+ "pankhuri":"Thank you for your guidance, trust and constant encouragement. Your energy and curiosity set the tone for all of us, and working under your leadership taught me more than I can put on a card. Grateful for every opportunity you gave me.",
+ "lakshmi-teja":"Thank you for every burst of laughter and every unpredictable mood. Life around you was never boring.",
+ "sampath":"Every house needs a Babai, and you were the best one. Keep the punch lines coming, whatever the chaos.",
+ "srikanth-lawyer":"Objection sustained: nobody did sarcasm better. Thank you for the endless arguments and the even more endless laughs.",
+ "deepika":"Arrive loud, leave suddenly, stay unforgettable. Never get in sync; the floor needs your chaos."
+};
+function renderSquad(id,list){document.getElementById(id).innerHTML=list.map(([n,t,d,img])=>{const tag=t.split(' (')[0],line=t.includes(' (')?t.slice(t.indexOf(' (')+2,-1):'',file=img||n.toLowerCase().replace(/\s+/g,'-');return `<div class="card member" role="button" tabindex="0" aria-expanded="false"><div class="flip-inner"><div class="face front"><div class="avatar"><img src="images/${file}.jpg" alt="${n}" onerror="this.replaceWith(document.createTextNode('${n[0]}'))"></div><h3>${n}</h3><span class="open-hint">Tap to reveal ↓</span><div class="details"><span class="tag">${tag}</span>${line?`<div class="tagline">“${line}”</div>`:''}<p>${d}</p><button class="flip-btn" type="button" aria-label="Flip card" title="Flip card">↻</button></div></div><div class="face back"><img class="back-photo" src="images/${file}-back.jpg" alt="" onerror="this.remove()"><span class="stamp">♥<small>2026</small></span><span class="postmark">FAREWELL<br>★ TCS ★</span><span class="kicker">A note from Arun</span><h4>Dear ${n},</h4><p>${notes[file]||''}</p><div class="sign"><span class="seal">A</span><span class="from">— Arun (Alu)</span></div><button class="flip-btn" type="button" aria-label="Flip back" title="Flip back">↺</button></div></div></div>`}).join('')}
+renderSquad('squadList',squad);renderSquad('specialList',special);renderSquad('prominentList',prominent);
+document.addEventListener('click',e=>{if(!e.target.closest('.member')){document.querySelectorAll('.member.open, .member.flipped').forEach(x=>{x.classList.remove('open','flipped');x.setAttribute('aria-expanded',false);x.querySelector('.open-hint').textContent='Tap to reveal ↓'})}});
+document.querySelectorAll('.member').forEach(m=>{m.addEventListener('click',e=>{if(e.target.closest('.flip-btn')){m.classList.toggle('flipped');return}const o=!m.classList.contains('open');m.parentElement.querySelectorAll('.member.open').forEach(x=>{x.classList.remove('open','flipped');x.setAttribute('aria-expanded',false);x.querySelector('.open-hint').textContent='Tap to reveal ↓'});if(o){m.classList.add('open');m.setAttribute('aria-expanded',true);m.querySelector('.open-hint').textContent='Tap to close ↑'}else{m.classList.remove('flipped','open');m.setAttribute('aria-expanded',false);m.querySelector('.open-hint').textContent='Tap to reveal ↓'}});m.addEventListener('keydown',e=>{if(e.target===m&&(e.key==='Enter'||e.key===' ')){e.preventDefault();m.click()}})});
+document.querySelectorAll('.person-card').forEach(c=>{c.setAttribute('role','button');c.setAttribute('tabindex','0');c.setAttribute('aria-expanded','false');c.insertAdjacentHTML('beforeend','<span class="open-hint">Tap to reveal ↓</span>');c.addEventListener('click',()=>{const show=!c.classList.contains('open');document.querySelectorAll('.person-card').forEach(x=>{x.classList.remove('open');x.setAttribute('aria-expanded','false');x.querySelector('.open-hint').textContent='Tap to reveal ↓'});if(show){c.classList.add('open');c.setAttribute('aria-expanded','true');c.querySelector('.open-hint').textContent='Tap to close ↑'}});c.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();c.click()}})});
+const wall=document.getElementById('candidWall');{const im=new Image();im.alt='The Office Chaos Files: a pinboard of candid team photos';im.onload=()=>{wall.appendChild(im);document.getElementById('candidMedia').classList.add('ready')};im.src='candids/office-chaos-files.png'}
+const lb=document.getElementById('lightbox');wall.addEventListener('click',e=>{if(e.target.tagName==='IMG'){lb.querySelector('img').src=e.target.src;lb.classList.add('show')}});lb.addEventListener('click',()=>lb.classList.remove('show'));document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('show')});
+const fmt=s=>{s=Math.round(s||0);return Math.floor(s/60)+':'+String(s%60).padStart(2,'0')};
+const cinema=document.getElementById('cinema'),cv=cinema.querySelector('video');
+function closeCinema(){cv.pause();cv.removeAttribute('src');cv.load();cinema.classList.remove('show')}
+document.querySelectorAll('.reel video').forEach(v=>{const media=v.parentElement,card=media.closest('.reel');
+ const setup=()=>{if(media.querySelector('.play-btn'))return;media.setAttribute('role','button');media.tabIndex=0;media.setAttribute('aria-label','Play '+card.querySelector('h3').textContent);media.insertAdjacentHTML('beforeend',`<span class="play-btn"></span><span class="reel-dur">${fmt(v.duration)}</span><span class="reel-hint">Previewing… click to watch with sound</span>`)};
+ v.readyState>=1?setup():v.addEventListener('loadedmetadata',setup);
+ card.addEventListener('mouseenter',()=>{if(!v.isConnected||!media.classList.contains('ready'))return;card.classList.add('previewing');v.play().catch(()=>{})});
+ card.addEventListener('mouseleave',()=>{card.classList.remove('previewing');if(v.isConnected){v.pause();v.currentTime=0.5}});
+ media.addEventListener('click',()=>{if(!v.isConnected)return;v.pause();cv.src=v.getAttribute('src').split('#')[0];cinema.querySelector('.cinema-title').textContent=card.querySelector('h3').textContent;cinema.classList.add('show');cv.play().catch(()=>{})});
+ media.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();media.click()}})});
+cinema.addEventListener('click',e=>{if(e.target===cinema||e.target.closest('.cinema-close'))closeCinema()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&cinema.classList.contains('show'))closeCinema()});
+document.querySelectorAll('.reel').forEach(r=>{r.insertAdjacentHTML('beforeend','<span class="reel-glare"></span>');r.addEventListener('mousemove',e=>{const b=r.getBoundingClientRect(),x=(e.clientX-b.left)/b.width,y=(e.clientY-b.top)/b.height;r.style.transform=`perspective(900px) rotateX(${(.5-y)*6}deg) rotateY(${(x-.5)*6}deg) translateY(-4px)`;r.style.setProperty('--gx',x*100+'%');r.style.setProperty('--gy',y*100+'%')});r.addEventListener('mouseleave',()=>{r.style.transform=''})});
+document.getElementById('guestForm').addEventListener('submit',e=>{e.preventDefault();const name=document.getElementById('guestName').value.trim(),memory=document.getElementById('guestMemory').value.trim(),message=document.getElementById('guestMessage').value.trim();if(!memory&&!message)return;const subject=encodeURIComponent(`Farewell memory from ${name}`);const body=encodeURIComponent(`Hi Arun,\n\nHere is my favourite memory with you:\n${memory}\n\nMessage for the next chapter:\n${message}\n\nBest,\n${name}`);window.location.href=`mailto:arunvamshi1996@gmail.com?subject=${subject}&body=${body}`;e.target.reset();toast('Opening your email app... ♥')});
+function toast(s){const t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2600)}
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
